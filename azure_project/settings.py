@@ -93,7 +93,7 @@ DATABASES = {
         'NAME': 'praravee-sql-db',
         'USER': 'praravee-admin',
         'PASSWORD': 'Wwaa_6747',
-        'HOST': 'praravee-sql-server.database.windows.net',
+        'HOST': 'praravee-sql.database.windows.net',
         'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 18 for SQL Server',
@@ -106,10 +106,11 @@ DATABASES = {
 import urllib.parse
 
 # MongoDB Configuration
-mongo_username = urllib.parse.quote_plus('praravee0admin')
-mongo_password = urllib.parse.quote_plus('wawa_6747')
+mongo_username = urllib.parse.quote_plus('praravee-admin')
+mongo_password = urllib.parse.quote_plus('Wawa_6747')
 # MONGO_URI = 'mongodb://localhost:27017/'
-MONGO_URI = f'mongodb+srv://{mongo_username}:{mongo_password}@praravee-mongdb.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000'
+# MONGO_URI = f'mongodb+srv://{mongo_username}:{mongo_password}@praravee-mongdb.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000'
+MONGO_URI = f'mongodb://{mongo_username}:{mongo_password}@praravee.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@praravee@'
 MONGO_DB_NAME = 'django_store_reviews'
 
 # Password validation
